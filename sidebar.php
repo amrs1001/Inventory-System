@@ -10,23 +10,24 @@
 <body>
   
   <main class="d-flex flex-nowrap">
-        <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark sidebar">
+        
+  <div class="d-flex flex-column flex-shrink-0 p-3 sidebar">
             <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                 <span class="fs-4">Dashboard</span>
             </a>
             <hr>
             <ul class="nav nav-pills flex-column mb-auto" id="sidebar-nav">
                 <li>
-                    <a href="dashboard.html" class="nav-link text-white"><i class="fa-solid fa-table-columns"></i> Dashboard</a>
+                    <a href="dashboard.php" class="nav-link text-white"><i class="fa-solid fa-table-columns"></i> Dashboard</a>
                 </li>
                 <li>
-                    <a href="products.html" class="nav-link text-white"><i class="fa-solid fa-cubes"></i> Stock</a>
+                    <a href="products.php" class="nav-link text-white"><i class="fa-solid fa-cubes"></i> Stock</a>
                 </li>
                 <li>
-                    <a href="customers.html" class="nav-link text-white"><i class="fa-solid fa-truck-ramp-box"></i> Suppliers</a>
+                    <a href="customers.php" class="nav-link text-white"><i class="fa-solid fa-truck-ramp-box"></i> Suppliers</a>
                 </li>
                 <li>
-                    <a href="customers.html" class="nav-link text-white"><i class="fa-solid fa-file-waveform"></i> Logs</a>
+                    <a href="logs.php" class="nav-link text-white"><i class="fa-solid fa-file-waveform"></i> Logs</a>
                 </li>
             </ul>
             <hr>
@@ -46,14 +47,14 @@
         </div>
         
         <div class="flex-grow-1 d-flex flex-column" style="margin-left: 280px;">
-          <nav class="navbar bg-dark search-nav">
-            <div class="container-fluid justify-content-end">
-              <form class="d-flex" role="search">
-                <input class="form-control me-2 bg-dark text-white border-secondary" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-light" type="submit">Search</button>
-              </form>
-            </div>
-          </nav>
+        <nav class="navbar search-nav">
+    <div class="container-fluid justify-content-end">
+        <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
@@ -74,6 +75,15 @@
                 }
             }
         });
+        const burgerMenu = document.querySelector('.burger-menu');
+const sidebar = document.querySelector('.sidebar');
+const mainContent = document.querySelector('.main-content');
+
+burgerMenu.addEventListener('click', () => {
+    burgerMenu.classList.toggle('active');
+    sidebar.classList.toggle('active');
+    mainContent.classList.toggle('active');
+});
     </script>
 </body>
 </html>

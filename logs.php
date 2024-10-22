@@ -18,9 +18,7 @@ include_once 'sidebar.php';
                         <thead>
                             <tr>
                                 <th>Name</th>
-                                
                                 <th>Price</th>
-
                                 <th>Remaining Pieces</th>
                                 <th>Delete</th>
                                 <th>Edit</th>

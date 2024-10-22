@@ -5,8 +5,10 @@
     top: 0;
     left: 0;
     overflow-y: auto;
-    background-color: #343a40;
+    background-color: #001f3d;
     padding-top: 20px;
+    transition: all 0.3s ease;
+    z-index: 1000;
 }
 
 .sidebar a .fs-4 {
@@ -14,9 +16,213 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 .main-content {
-    margin-left: 280px; 
-    padding: 20px; 
-    min-height: 100vh; 
+    margin-left: 280px;
+    padding: 20px;
+    min-height: 100vh;
     background-color: #f1f1f1;
+    transition: margin-left 0.3s ease;
+}
+
+.search-nav {
+    background-color: #001f3d !important;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-nav .form-control {
+    background-color: #003366 !important;
+    border: 1px solid #004080 !important;
+    color: #ffffff !important;
+}
+
+.search-nav .form-control::placeholder {
+    color: #8fa6bc !important;
+}
+
+.search-nav .btn-outline-light {
+    border-color: #004080 !important;
+    color: #ffffff !important;
+}
+
+.search-nav .btn-outline-light:hover {
+    background-color: #004080 !important;
+    border-color: #004080 !important;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.search-nav .form-control,
+.search-nav .btn-outline-light {
+    transition: all 0.3s ease;
+}
+
+.search-nav .form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 64, 128, 0.25) !important;
+    border-color: #004080 !important;
+    transform: translateY(-2px);
+}
+
+.search-nav .form-control,
+.search-nav .btn-outline-light {
+    border-radius: 20px !important;
+}
+
+.search-nav .form-control {
+    padding: 8px 15px !important;
+}
+
+.search-nav .btn-outline-light {
+    padding: 8px 20px !important;
+}
+
+.sidebar hr {
+    margin: 1rem 0;
+    color: #ffffff;
+    opacity: 0.25;
+    border-top: 1px solid;
+    width: 100%;
+}
+
+.sidebar hr:first-of-type {
+    margin: 1rem 0;
+    border-top: 2px solid #ffffff;
+    opacity: 0.5;
+}
+
+.sidebar hr:last-of-type {
+    margin: 1rem 0;
+    border-top: 1px solid #ffffff;
+    opacity: 0.25;
+}
+
+.sidebar .nav-link {
+    color: #ffffff !important;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-left: 15px;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #003366 !important;
+    transform: translateX(10px);
+    padding-left: 25px;
+}
+
+.sidebar .nav-link.active {
+    background-color: #004080 !important;
+    color: #ffffff !important;
+}
+
+.sidebar .nav-link.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background-color: #ffffff;
+    animation: slideDown 0.3s ease-out;
+}
+
+.sidebar .nav-link i {
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.sidebar .nav-link:hover i {
+    transform: scale(1.2);
+}
+
+.dropdown-toggle {
+    transition: all 0.3s ease;
+}
+
+.dropdown-toggle:hover {
+    transform: translateY(-2px);
+}
+
+.dropdown-menu {
+    transition: all 0.3s ease;
+    transform-origin: top;
+    animation: dropdownAnimation  0.3s ease;
+}
+
+.dropdown-menu.show {
+    animation: dropdownAnimation 0.3s ease reverse;
+}
+
+.burger-menu {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1001;
+    display: none;
+    cursor: pointer;
+}
+
+.burger-menu .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.burger-menu .bar:nth-child(2) {
+    width: 20px;
+}
+
+.burger-menu.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@keyframes dropdownAnimation {
+    0% {
+        transform: scaleY(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 0;
+        margin-left: -280px;
+    }
+    .main-content {
+        margin-left: 0;
+    }
+    .burger-menu {
+        display: block;
+    }
+    .sidebar.active {
+        width: 280px;
+        margin-left: 0;
+    }
+    .main-content.active {
+        margin-left: 280px;
+    }
 }
