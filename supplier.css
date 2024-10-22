@@ -1,0 +1,126 @@
+/* Main Content Background */
+.main-content {
+  margin-left: 280px; 
+  padding: 20px; 
+  min-height: 100vh; 
+  background-color: #f1f1f1;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 280px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #343a40;
+  padding-top: 20px;
+  overflow-y: auto;
+}
+
+/* Hide scrollbar for sidebar */
+.sidebar {
+  scrollbar-width: none; /* Firefox */
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Edge */
+}
+
+/* Content Box Styling */
+.content {
+  padding:  20px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.supplier-management-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Form and Supplier Table Styling */
+.form-container, .supplier-table {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 300px;
+  max-width: 48%;
+  margin-top: 20px;
+}
+
+.form-container h2, .supplier-table h2 {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+table th, table td {
+  padding: 12px;
+  text-align: left;
+}
+
+table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+table tr:hover {
+  background-color: #e9ecef;
+}
+
+button {
+  padding: 8px 12px;
+  margin-right: 5px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+
+}
+
+button.edit-btn {
+  
+  padding-right: 42px;
+  background-color: #007bff;
+  text-align: center;
+}
+
+button.remove-btn {
+  background-color: #dc3545;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Form Styling */
+form label {
+  margin-top: 15px;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+form button {
+  background-color: #28a745;
+  color: white;
+}
+
+form button:hover {
+  background-color: #218838;
+}
