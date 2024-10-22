@@ -4,38 +4,29 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .sidebar {
-            width: 280px;
-            height: 100vh;
-        }
-
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   <link rel="stylesheet" href="sidebar.css">
 </head>
 <body>
   
   <main class="d-flex flex-nowrap">
-    
         <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark sidebar">
             <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                 <span class="fs-4">Dashboard</span>
             </a>
             <hr>
             <ul class="nav nav-pills flex-column mb-auto" id="sidebar-nav">
-                <li class="nav-item">
-                    <a href="sidebar.php" class="nav-link text-white">Home</a>
+                <li>
+                    <a href="dashboard.html" class="nav-link text-white"><i class="fa-solid fa-table-columns"></i> Dashboard</a>
                 </li>
                 <li>
-                    <a href="dashboard.html" class="nav-link text-white">Dashboard</a>
+                    <a href="products.html" class="nav-link text-white"><i class="fa-solid fa-cubes"></i> Stock</a>
                 </li>
                 <li>
-                    <a href="orders.html" class="nav-link text-white">Orders</a>
+                    <a href="customers.html" class="nav-link text-white"><i class="fa-solid fa-truck-ramp-box"></i> Suppliers</a>
                 </li>
                 <li>
-                    <a href="products.html" class="nav-link text-white">Products</a>
-                </li>
-                <li>
-                    <a href="customers.html" class="nav-link text-white">Customers</a>
+                    <a href="customers.html" class="nav-link text-white"><i class="fa-solid fa-file-waveform"></i> Logs</a>
                 </li>
             </ul>
             <hr>
@@ -49,12 +40,12 @@
                     <li><a class="dropdown-item" href="#">Settings</a></li>
                     <li><a class="dropdown-item" href="#">Profile</a></li>
                     <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Sign out</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket"></i> Sign out</a></li>
                 </ul>
             </div>
         </div>
         
-        <div class="flex-grow-1 d-flex flex-column">
+        <div class="flex-grow-1 d-flex flex-column" style="margin-left: 280px;">
           <nav class="navbar bg-dark search-nav">
             <div class="container-fluid justify-content-end">
               <form class="d-flex" role="search">

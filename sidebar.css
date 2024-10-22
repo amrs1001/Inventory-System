@@ -1,0 +1,22 @@
+.sidebar {
+    width: 280px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    background-color: #343a40;
+    padding-top: 20px;
+}
+
+.sidebar a .fs-4 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.main-content {
+    margin-left: 280px; 
+    padding: 20px; 
+    min-height: 100vh; 
+    background-color: #f1f1f1;
+}
